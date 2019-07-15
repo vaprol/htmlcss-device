@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+.shop-services h3,
+.about h3 {
+  font-family: "Gilroy ExtraBold", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #000000;
+}
+
+h1.catalog-heading {
+  font-family: "Gilroy ExtraBold", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #000000;
+}
+
+h3.product-name {
+  font-family: "Gilroy ExtraBold", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.header-logo,
+.footer-logo {
+  font-family: "Gilroy ExtraBold", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+}
