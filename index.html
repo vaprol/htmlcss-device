@@ -7,8 +7,11 @@
   </head>
   <body>
     <header class="main-header">
-      <b class="header-logo">Device</b>
-      <label class="header-search">Поиск по сайту<input type="text"></label>
+      <a href="#"><b class="header-logo">Device</b></a>
+      <p class="header-searchbar">
+        <label class="visually-hidden" for="header-search">Поиск по сайту</label>
+        <input type="text" id="header-search" placeholder="Поиск по сайту">
+      </p>
       <ul class="user-profile">
         <li><a href="#">Войти</a></li>
       </ul>
@@ -96,9 +99,9 @@
             </table>
           </li>
         </ul>
-        <label for="promo-goods-01"><input type="checkbox" id="promo-goods-01" value="01" checked></label>
-        <label for="promo-goods-02"><input type="checkbox" id="promo-goods-02" value="01"></label>
-        <label for="promo-goods-03"><input type="checkbox" id="promo-goods-03" value="01"></label>
+        <label for="promo-slide-01"><input type="radio" id="promo-slide-01" name="promo-slider" checked></label>
+        <label for="promo-slide-02"><input type="radio" id="promo-slide-02" name="promo-slider"></label>
+        <label for="promo-slide-03"><input type="radio" id="promo-slide-03" name="promo-slider"></label>
       </section>
 
       <section class="goods-categories">
@@ -116,20 +119,26 @@
       <section class="shop-services">
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="service-categories">
-          <li class="service-category">Доставка</li>
-          <li class="service-category">Гарантия</li>
-          <li class="service-category">Кредит</li>
+          <li class="service-category">
+            <button type="button">Доставка</button>
+          </li>
+          <li class="service-category">
+            <button type="button">Гарантия</button>
+          </li>
+          <li class="service-category">
+            <button type="button">Кредит</button>
+          </li>
         </ul>
         <ul class="service-catogories-descriptions">
           <li class="service-category-description">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="service-category-description">
+          <li class="service-category-description hidden">
             <h3>Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
-          <li class="service-category-description">
+          <li class="service-category-description hidden">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
           </li>
@@ -157,39 +166,37 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a href="#"><span>Подробнее о нас</span></a>
+          <a href="#">Подробнее о нас</a>
         </div>
         <div class="about-us">
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <img src="img/map-placeholder.jpg" alt="Наше местополжение на карте">
+          <img src="img/map-placeholder.jpg" alt="Наш адрес: г. Москва, ул. Строителей, 1">
           <button type="button">Напишите нам</button>
         </div>
         <div class="big-map">
 <!--          Карта-->
-          <span class="close-popup">x</span>
+          <button class="close-popup" type="button" aria-label="Закрыть попап"> </button>
         </div>
-        <div class="feedback-popup">
-          <span class="close-popup">x</span>
-<!--      Здесь форма отправки-->
-          <form action="" method="post">
-            <label for="feedback-name">
-              <input type="text" id="feedback-name" value="Имя Фамилия">
-            </label>
-            <label for="feedback-email">
-              <input type="text" id="feedback-email" value="Имя Фамилия">
-            </label>
-            <label for="feedback-message">
-              <textarea name="feedback-message" id="feedback-message" cols="30" rows="10"></textarea>
-            </label>
+
+        <section class="feedback-popup">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+            <label for="feedback-name">Ваше имя:</label>
+            <input type="text" id="feedback-name" value="" placeholder="Имя Фамилия">
+            <label for="feedback-email">Ваш e-mail:</label>
+            <input type="email" id="feedback-email" value="" placeholder="email@example.com">
+            <label for="feedback-message">Текст письма:</label>
+            <textarea name="feedback-message" id="feedback-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
             <button type="submit">Отправить</button>
           </form>
-        </div>
+          <button class="close-popup" type="button" aria-label="Закрыть попап"> </button>
+        </section>
       </section>
     </main>
 
     <footer class="main-footer">
-      <b class="footer-logo">Device</b>
+      <a href="#"><b class="header-logo">Device</b></a>
       <p class="footer-address">г. Москва, ул. Строителей, 15</p>
       <nav class="footer-nav">
         <ul>
