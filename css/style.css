@@ -1,5 +1,179 @@
 body {
-  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Стили элементов хедера*/
+/*----------------------*/
+
+.main-header::before {
+  content: "";
+  background-color: #f7e296;
+  width: 1160px;
+  height: 300px;
+  position: fixed;
+  top: 40px;
+  margin: auto;
+}
+
+.header-logo,
+.footer-logo {
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.header-logo:hover,
+.footer-logo:hover {
+  filter: opacity(0.6);
+}
+
+.header-logo:active,
+.footer-logo:active {
+  filter: opacity(0.3);
+}
+
+.header-searchbar input {
+  filter: opacity(0.3);
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.header-searchbar input:hover {
+  filter: opacity(0.6);
+}
+
+.header-searchbar input:focus {
+  filter: none;
+}
+
+.header-searchbar button {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.header-searchbar button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.header-searchbar button:active {
+  background-color: #000000;
+  color: hsl(0, 0%, 30%);
+}
+
+.user-profile a,
+.custom-purchase a{
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #000000;
+}
+
+.header-nav-list > li > a {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.catalog-submenu a {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: normal;
+}
+
+.slider-index {
+  font-size: 180px;
+  color: #ffffff;
+}
+
+.slider-message {
+  font-size: 47px;
+  line-height: 56px;
+  letter-spacing: 0.5px;
+}
+
+.slider-description {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.button-crossed {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+  border: none;
+  background-color: transparent;
+}
+
+.button-crossed:hover {
+  background-color: #ffc600;
+}
+
+.button-crossed:active {
+  color: #f7e184;
+  background-color: #000000;
+}
+
+.slider-feature-values td {
+  font-family: "Gilroy Light", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.slider-feature-description {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.slider-select {
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 5px;
 }
 
 .shop-services h3,
@@ -10,6 +184,152 @@ body {
   font-weight: bold;
   color: #000000;
 }
+
+.service-descriptions p {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.brands img {
+  filter: grayscale(1)
+          opacity(0.2);
+}
+
+.brands img:hover {
+  filter: none;
+}
+
+.about-us p {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.about-deliveries {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+button.close-popup {
+  background-image: url("../img/modal-close.svg");
+  filter: opacity(0.5);
+  background-color: transparent;
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+button.close-popup:hover {
+  filter: opacity(1);
+}
+
+button.close-popup:active {
+  filter: opacity(0.3);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  color: #464646;
+  border: none;
+  outline: none;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  background-color: #eaeaea;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  background-color: #ffffff;
+  border: 3px solid #f0c52e;
+}
+
+.feedback-form input:invalid,
+.feedback-form textarea:invalid {
+  background-color: #f6dada;
+}
+/*----------------------*/
+
+/*Стили элементов футера*/
+/*----------------------*/
+.main-footer {
+  background-color: #464646;
+}
+
+.footer-logo {
+  color: #ffc600;
+}
+
+.main-footer p {
+  color: #ffffff;
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.footer-nav a:hover {
+  filter: opacity(0.6);
+}
+
+.footer-nav a:active {
+  filter: opacity(0.3);
+}
+
+.socials img {
+  filter: opacity(0.3);
+}
+
+.socials img:hover {
+  filter: opacity(0.6);
+}
+
+.socials img:active {
+  filter: opacity(0.1);
+}
+
+.footer-column:last-child a {
+  color: #ffffff;
+  filter: opacity(0.7);
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.footer-column:last-child a:hover {
+  filter: opacity(1);
+}
+
+.footer-column:last-child a:active {
+  filter: opacity(0.3);
+}
+
+.academy-logo:hover {
+  filter: opacity(0.6);
+}
+
+.academy-logo:active {
+  filter: opacity(0.3);
+}
+/*----------------------*/
 
 h1.catalog-heading {
   font-family: "Gilroy ExtraBold", sans-serif;
@@ -27,12 +347,4 @@ h3.product-name {
   color: #000000;
 }
 
-.header-logo,
-.footer-logo {
-  font-family: "Gilroy ExtraBold", sans-serif;
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000000;
-}
+
