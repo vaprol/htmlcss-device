@@ -489,7 +489,6 @@ h1.catalog-heading {
 
 /*Стили элементов фильтра товаров в каталоге*/
 /*----------------------*/
-
 .catalog-filters {
   background-color: #efefef;
 }
@@ -532,12 +531,196 @@ h1.catalog-heading {
   height: 20px;
 }
 
-h3.product-name {
-  font-family: "Gilroy ExtraBold", sans-serif;
-  font-size: 18px;
+.filter-price input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  filter: opacity(0.2);
+  font-family: "Gilroy Light", Arial, sans-serif;
+  font-size: 14px;
   line-height: 24px;
-  font-weight: bold;
-  color: #000000;
 }
 
+.filter-color label::before {
+  content: "";
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
+  display: inline-block;
+}
+
+.catalog-filters label {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.filter-bluetooth label::before {
+  content: "";
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+.filter-bluetooth label:nth-child(2)::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.filter-bluetooth label:last-child::before {
+  background-image: url("../img/radio-off.svg");
+}
+/*----------------------*/
+
+/*Стили элементов сортировки товаров в каталоге*/
+/*----------------------*/
+.catalog-goods-sort {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.catalog-goods-sort p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.catalog-goods-sort a {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.catalog-goods-sort a:not(.sort-chosen) {
+  filter: opacity(0.3);
+}
+
+.catalog-goods-sort a:not(.sort-chosen):hover {
+  filter: opacity(0.6);
+}
+
+.catalog-goods-sort a:not(.sort-chosen):active {
+  filter: opacity(1);
+}
+
+.catalog-goods-sort button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  width: 11px;
+  height: 10px;
+}
+
+.goods-sort-up-dir {
+  background-image: url("../img/icon-up-dir.svg");
+}
+
+.goods-sort-down-dir {
+  background-image: url("../img/icon-down-dir.svg");
+}
+
+.catalog-goods-sort button:not(.sort-dir-chosen) {
+  filter: opacity(0.2);
+}
+
+.catalog-goods-sort button:not(.sort-dir-chosen):hover {
+  filter: opacity(0.4);
+}
+
+.catalog-goods-sort button:not(.sort-dir-chosen):active {
+  filter: none;
+}
+/*----------------------*/
+
+/*Стили элементов товаров в каталоге*/
+/*----------------------*/
+.product-price {
+  font-family: "Gilroy Light", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+button.add-to-cart {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Gilroy ExtraBold", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+  border: none;
+  background-color: transparent;
+}
+
+button.add-to-cart:hover {
+  background-color: #f0c52e;
+}
+
+button.add-to-cart:active {
+  background-color: #f0c52e;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+button.add-to-compare {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 36px;
+  border: none;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+button.add-to-compare:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+button.add-to-compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.product-new {
+  background-image: url("../img/product-new.png");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.page-navigation {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.page-navigation a {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.catalog-previous-page:hover,
+.catalog-next-page:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.catalog-previous-page:active,
+.catalog-next-page:active {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-navigation a:not(.catalog-current-page) {
+  filter: opacity(0.3);
+}
+
+.page-navigation a:not(.catalog-current-page):hover {
+  filter: opacity(0.6);
+}
+
+.page-navigation a:not(.catalog-current-page):active {
+  filter: none;
+}
 
