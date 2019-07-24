@@ -1,6 +1,7 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 1160px;
 
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
@@ -18,6 +19,16 @@ li {
   list-style: none;
 }
 
+*, *!::before, *!::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+.content-box-component {
+  box-sizing: content-box;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -30,8 +41,12 @@ li {
   display: none;
 }
 
-/*Стили элементов хедера*/
+/*Стили элементов верхней строки хедера*/
 /*----------------------*/
+.main-header {
+  padding: 0 60px;
+}
+
 .main-header::before {
   content: "";
   background-color: #f7e296;
@@ -40,7 +55,7 @@ li {
   position: absolute;
   z-index: -1;
   top: 40px;
-  margin: auto;
+  margin-left: -60px;
 }
 
 .header-logo,
@@ -60,15 +75,50 @@ li {
   filter: opacity(0.3);
 }
 
+.header-logo {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.search-user-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  min-height: 50px;
+}
+
+.search-user-row ul {
+  padding: 0;
+}
+
+.header-searchbar {
+  width: 440px;
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+}
+
 .header-searchbar input {
   filter: opacity(0.3);
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  line-height: 30px;
+  line-height: 45px;
   font-weight: normal;
   background-color: transparent;
   border: none;
   outline: none;
+  width: 355px;
+  padding-left: 40px;
+}
+
+.header-searchbar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/search.svg");
 }
 
 .header-searchbar input:hover {
@@ -78,15 +128,17 @@ li {
 .header-searchbar input:focus {
   filter: none;
   border-bottom: 2px solid #000000;
+  /*margin-top: 2px;*/
 }
 
 .header-searchbar button {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  line-height: 30px;
+  line-height: 45px;
   font-weight: normal;
   background-color: transparent;
   border: 2px solid #000000;
+  padding: 0 20px;
 }
 
 .header-searchbar button:hover {
@@ -97,6 +149,27 @@ li {
 .header-searchbar button:active {
   background-color: #000000;
   color: hsl(0, 0%, 30%);
+}
+
+.user-profile {
+  width: 260px;
+  margin: 0;
+  margin-right: 20px;
+  display: flex;
+}
+
+.user-profile a {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile a::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/user.svg");
+  margin-right: 10px;
 }
 
 .user-profile a,
@@ -118,6 +191,63 @@ li {
   filter: opacity(0.3);
 }
 
+.custom-purchase {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.custom-purchase a {
+  display: flex;
+  align-items: center;
+}
+
+.custom-purchase a::before {
+  content: "";
+  display: block;
+  margin-right: 10px;
+}
+
+.custom-compare a::before {
+  background-image: url("../img/compare.svg");
+  width: 10px;
+  height: 10px;
+}
+
+.custom-cart a::before {
+  background-image: url("../img/cart.svg");
+  width: 10px;
+  height: 10px;
+}
+/*----------------------*/
+
+/*Стили элементов навигационного меню хедера*/
+/*----------------------*/
+.main-nav {
+  margin-bottom: 50px;
+}
+
+.header-nav-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-list > li:first-child {
+  width: 440px;
+  margin-right: 100px;
+}
+
+.header-nav-list > li:nth-child(2) {
+  margin-right: 40px;
+}
+
+.header-nav-list > li:last-child {
+  margin-left: auto;
+}
+
 a.main-menu-item {
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -131,33 +261,105 @@ a.main-menu-item {
   filter: opacity(0.3);
 }
 
-.header-nav-list button {
-  background-color: transparent;
+.catalog-opener {
+  display: flex;
+  align-items: center;
+}
+
+.catalog-opener::after {
+  content: "";
+  display: block;
   background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   filter: opacity(0.3);
-  border: none;
-  outline: none;
+  margin-left: 12px;
+}
+
+.catalog-submenu {
+  background-color: #f7e296;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 1040px;
+  height: 110px;
+  padding: 16px 0;
+  align-content: flex-start;
+}
+
+.catalog-submenu li {
+  margin-right: 60px;
+}
+
+.catalog-submenu li:nth-child(5) {
+  margin-bottom: 30px;
 }
 
 .catalog-submenu a {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  line-height: 36px;
+  line-height: 35px;
   font-weight: normal;
+}
+/*----------------------*/
+
+/*Стили элементов главного слайдера*/
+/*----------------------*/
+.promo-slider {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-list > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-image {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
+
+.slide-content {
+  width: 500px;
 }
 
 .slider-index {
+  display: flex;
+  width: inherit;
+  position: absolute;
+}
+
+.slider-index span {
   font-size: 180px;
+  line-height: 140px;
   color: #ffffff;
+  margin-left: auto;
+  z-index: -1;
+}
+
+.slider-message::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
+  margin: 35px 0 30px 0;
 }
 
 .slider-message {
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .slider-description {
@@ -165,6 +367,7 @@ a.main-menu-item {
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
+  margin: 25px 0 50px 0;
 }
 
 .button-crossed {
@@ -188,11 +391,17 @@ a.main-menu-item {
   background-color: #000000;
 }
 
+.slider-features {
+  margin-top: 50px;
+  border-spacing: 0 20px;
+}
+
 .slider-feature-values td {
   font-family: "Gilroy Light", Arial, sans-serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: 0.5px;
+  width: 160px;
 }
 
 .slider-feature-description {
@@ -723,4 +932,5 @@ button.add-to-compare:active {
 .page-navigation a:not(.catalog-current-page):active {
   filter: none;
 }
+
 
