@@ -309,7 +309,7 @@ a.main-menu-item {
 /*----------------------*/
 .promo-slider {
   width: 1040px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 
 .slider-list {
@@ -381,6 +381,17 @@ a.main-menu-item {
   border: none;
   background-color: transparent;
 }
+/*
+.slide-content a::before {
+  content: "";
+  position: absolute;
+  background-color: #f0c52e;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  margin: 7px 0;
+}
+*/
 
 .button-crossed:hover {
   background-color: #ffc600;
@@ -411,16 +422,44 @@ a.main-menu-item {
   font-weight: normal;
 }
 
+.slider-handlers {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1040px;
+  margin-top: -175px;
+  z-index: -1;
+}
+
 button.slider-select {
   border: 2px solid #000000;
   border-radius: 50%;
   background-color: #ffffff;
   padding: 5px;
+  margin-right: 20px;
+}
+
+button.slider-select:last-child::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  padding: 1px;
+  margin: -3px;
 }
 /*----------------------*/
 
 /*Стили элементов популярных категорий*/
 /*----------------------*/
+
+.goods-categories ul {
+  display: flex;
+  width: 1160px;
+  padding: 0;
+  margin: 0 auto 80px;
+  justify-content: space-between;
+}
+
 .goods-category-name {
   width: 160px;
   padding: 0;
@@ -434,6 +473,7 @@ button.slider-select {
    width: 160px;
    height: 160px;
    display: block;
+  margin-bottom: 40px;
  }
 
 .goods-category-name:nth-child(1) a::before {
