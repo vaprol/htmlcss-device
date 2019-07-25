@@ -8,27 +8,27 @@
   <body>
     <header class="main-header">
       <a href="index.html"><b class="header-logo">Device</b></a>
-      <form class="header-searchbar">
-        <label class="visually-hidden" for="header-search">Поиск по сайту</label>
-        <input type="text" id="header-search" placeholder="Поиск по сайту">
-        <button type="submit" class="hidden">Найти</button>
-      </form>
-      <ul class="user-profile">
-        <li><a href="#">Валентин Петухов</a></li>
-        <li><a href="#">Выйти</a></li>
-      </ul>
-      <p class="custom-purchase">
-        <a href="#">Сравнить</a>
-        <a href="#">Корзина</a>
-      </p>
+
+      <div class="search-user-row">
+        <form class="header-searchbar">
+          <label class="visually-hidden" for="header-search">Поиск по сайту</label>
+          <input type="text" id="header-search" placeholder="Поиск по сайту">
+          <button type="submit" class="hidden">Найти</button>
+        </form>
+        <ul class="user-profile">
+          <li><a href="#">Валентин Петухов</a></li>
+          <li><a href="#">Выйти</a></li>
+        </ul>
+        <ul class="custom-purchase">
+          <li class="custom-compare"><a href="#">Сравнить</a></li>
+          <li class="custom-cart"><a href="#">Корзина</a></li>
+        </ul>
+      </div>
+
       <nav class="main-nav">
         <ul class="header-nav-list">
-          <li>
-            <p>
-              <a href="#" class="main-menu-item">Каталог товаров</a>
-              <button type="button"></button>
-            </p>
-            <ul class="catalog-submenu hidden">
+          <li><a href="#" class="main-menu-item catalog-opener">Каталог товаров</a>
+            <ul class="catalog-submenu visually-hidden">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
@@ -162,46 +162,40 @@
         </nav>
       </section>
     </main>
+
     <footer class="main-footer">
-      <div class="footer-column">
-        <a href="#"><b class="footer-logo">Device</b></a>
-        <p class="footer-address">г. Москва, ул. Строителей, 15</p>
-      </div>
+      <div class="container">
+        <div class="footer-column">
+          <a href="#"><b class="footer-logo">Device</b></a>
+          <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+        </div>
 
-      <div class="footer-column">
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
+        <div class="footer-column">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="socials">
+            <li><a href="#"><img src="img/social-fb.svg" alt="Мы на Facebook"></a></li>
+            <li><a href="#"><img src="img/social-instagram.svg" alt="Мы в Instagram"></a></li>
+            <li><a href="#"><img src="img/social-twitter.svg" alt="Мы в Twitter"></a></li>
           </ul>
-        </nav>
-        <ul class="socials">
-          <li><a href="#"><img src="img/social-fb.svg" alt="Мы на Facebook"></a></li>
-          <li><a href="#"><img src="img/social-instagram.svg" alt="Мы в Instagram"></a></li>
-          <li><a href="#"><img src="img/social-twitter.svg" alt="Мы в Twitter"></a></li>
-        </ul>
-      </div>
+        </div>
 
-      <div class="footer-column">
-        <ul class="user-profile">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
-        </ul>
-        <a href="#">Сравнить</a>
-        <a href="#">Корзина</a>
-        <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
-        <a href="#"><img src="img/logo-htmlacademy.svg" alt="HTMLAcademy"></a>
+        <div class="footer-column">
+          <ul class="footer-user-panel">
+            <li class="footer-custom-user"><a href="#">Валентин Петухов</a></li>
+            <li><a href="#">Выйти</a></li>
+            <li class="footer-custom-compare"><a href="#">Сравнить</a></li>
+            <li class="footer-custom-cart"><a href="#">Корзина</a></li>
+          </ul>
+          <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
+          <a href="#"><img  class="academy-logo" src="img/logo-htmlacademy.svg" alt="HTMLAcademy"></a>
+        </div>
       </div>
-
-      <ul class="user-profile">
-        <li><a href="#">Валентин Петухов</a></li>
-        <li><a href="#">Выйти</a></li>
-      </ul>
-      <a href="#">Сравнить</a>
-      <a href="#">Корзина</a>
-      <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
-      <a href="#"><img src="img/logo-htmlacademy.svg" alt="HTMLAcademy"></a>
     </footer>
   </body>
 </html>

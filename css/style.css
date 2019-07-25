@@ -746,6 +746,22 @@ button.slider-select:last-child::after {
   margin-bottom: 75px;
 }
 
+.popup-container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.map-popup {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 960px;
+  height: 560px;
+  background-image: url("../img/map-big.jpg");
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  margin-top: 40px;
+}
+
 button.close-popup {
   background-image: url("../img/modal-close.svg");
   filter: opacity(0.5);
@@ -754,6 +770,7 @@ button.close-popup {
   width: 55px;
   height: 55px;
   border-radius: 50%;
+  margin: 20px;
 }
 
 button.close-popup:hover {
@@ -762,6 +779,48 @@ button.close-popup:hover {
 
 button.close-popup:active {
   filter: opacity(0.3);
+}
+
+.feedback-popup {
+  position: absolute;
+  width: 960px;
+  margin-top: 40px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-popup .close-popup {
+  float: right;
+  align-self: flex-end;
+}
+
+.feedback-form {
+  align-self: center;
+  width: 760px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feedback-form input {
+  width: 360px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.feedback-form textarea {
+  width: 760px;
+  height: 156px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .feedback-form input,
