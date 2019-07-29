@@ -1020,10 +1020,32 @@ button.close-popup:active {
 
 /*Стили элементов страницы каталога товаров*/
 /*----------------------*/
+
+.catalog-page .main-header::before {
+  height: 186px;
+}
+
+.catalog-page .main-header {
+  margin-bottom: 90px;
+}
+
 h1.catalog-heading {
   font-size: 47px;
   line-height: 48px;
   letter-spacing: 1px;
+  width: 1040px;
+  margin: 0 auto 30px;
+}
+
+.breadcrumbs {
+  width: 1040px;
+  margin: 0 auto 50px;
+  padding: 0;
+  display: flex;
+}
+
+.breadcrumbs li {
+  margin-right: 15px;
 }
 
 .breadcrumbs a {
@@ -1051,28 +1073,49 @@ h1.catalog-heading {
   width: 8px;
   height: 8px;
   display: inline-block;
+  margin-left: 15px;
 }
 /*----------------------*/
 
 /*Стили элементов фильтра товаров в каталоге*/
 /*----------------------*/
+.catalog-page .bg-container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog-filters {
-  background-color: #efefef;
+  width: 200px;
+  padding-left: 60px;
+  box-sizing: border-box;
+}
+
+.catalog-goods {
+  width: 760px;
 }
 
 .catalog-filters h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
+  padding: 25px 0;
+  margin-bottom: 70px;
 }
 
 .catalog-filters fieldset {
   border: none;
+  border-top: 2px solid #000000;
+  width: 200px;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
-.catalog-filters legend {
+.catalog-filters h3 {
   line-height: 45px;
-  border-top: 2px solid #000000;
+  padding: 0;
+  margin: 5px 0 25px 0;
 }
 
 .price-custom-filter {
@@ -1083,6 +1126,7 @@ h1.catalog-heading {
   width: 196px;
   height: 2px;
   background-color: #dbdbdb;
+  position: relative;
 }
 
 .price-bar-inner {
@@ -1094,8 +1138,20 @@ h1.catalog-heading {
 .price-bar-slider {
   background-image: url("../img/filter-button.svg");
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
+  top: -10px;
+  position: absolute;
+}
+
+.price-bar-slider:nth-child(2) {
+  left: 100px;
+}
+
+.filter-price p {
+  display: flex;
+  width: 200px;
+  margin: 0;
 }
 
 .filter-price input {
@@ -1106,6 +1162,12 @@ h1.catalog-heading {
   font-family: "Gilroy Light", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
+  width: 100px;
+}
+
+.filter-color {
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-color label::before {
@@ -1115,6 +1177,12 @@ h1.catalog-heading {
   width: 27px;
   height: 23px;
   display: inline-block;
+  margin-right: 15px;
+}
+
+.filter-color label {
+  display: flex;
+  align-items: center;
 }
 
 .catalog-filters label {
@@ -1125,12 +1193,23 @@ h1.catalog-heading {
   letter-spacing: 0.5px;
 }
 
+.filter-bluetooth {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-bluetooth label {
+  display: flex;
+  align-items: center;
+}
+
 .filter-bluetooth label::before {
   content: "";
   background-repeat: no-repeat;
   width: 25px;
   height: 25px;
   display: inline-block;
+  margin-right: 15px;
 }
 
 .filter-bluetooth label:nth-child(2)::before {
@@ -1140,18 +1219,46 @@ h1.catalog-heading {
 .filter-bluetooth label:last-child::before {
   background-image: url("../img/radio-off.svg");
 }
+
+.catalog-filters .button-crossed {
+  width: 200px;
+}
+
+.catalog-filters .button-crossed:active {
+  background-color: #f0c52e;
+  color: rgba(0, 0, 0, 0.3);
+}
 /*----------------------*/
 
 /*Стили элементов сортировки товаров в каталоге*/
 /*----------------------*/
 .catalog-goods-sort {
   background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
 }
 
 .catalog-goods-sort p {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
+  margin-right: 45px;
+}
+
+.catalog-goods-sort ul {
+  display: flex;
+  padding: 0;
+}
+.sort-types li {
+  margin-right: 25px;
+}
+
+.sort-dir-buttons {
+  margin-left: auto;
+}
+
+.sort-dir-buttons li {
+  margin-left: 15px;
 }
 
 .catalog-goods-sort a {
@@ -1205,11 +1312,53 @@ h1.catalog-heading {
 
 /*Стили элементов товаров в каталоге*/
 /*----------------------*/
+.goods-list {
+  padding: 70px 0 0 0;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-list li:nth-child(2n-1) {
+  margin-right: 40px;
+}
+
+.product-spec {
+  display: flex;
+  width: 360px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.product-spec h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .product-price {
   font-family: "Gilroy Light", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.goods-list li {
+  position: relative;
+}
+
+.goods-list .add-to-buttons {
+  width: 360px;
+  height: 380px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(238, 238, 238, 0.7);
+  top: 0;
+  left: 0;
+  align-items: center;
 }
 
 button.add-to-cart {
@@ -1218,10 +1367,12 @@ button.add-to-cart {
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 40px;
   color: #000;
   border: none;
   background-color: transparent;
+  width: 200px;
+  margin-top: 20px;
 }
 
 button.add-to-cart:hover {
@@ -1256,16 +1407,37 @@ button.add-to-compare:active {
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
 }
 
 .page-navigation {
   background-color: rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .page-navigation a {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
+}
+
+.page-navigation > a {
+  padding: 25px 30px;
+}
+
+.catalog-page-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-page-list li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .catalog-previous-page:hover,
@@ -1289,6 +1461,10 @@ button.add-to-compare:active {
 
 .page-navigation a:not(.catalog-current-page):active {
   filter: none;
+}
+
+.catalog-page .main-footer {
+  margin-top: 80px;
 }
 
 
