@@ -40,7 +40,7 @@ li {
 .button-crossed {
   display: block;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -337,12 +337,12 @@ a.user-ancor-iconed::before {
 .promo-slider {
   width: 1040px;
   margin: 0 auto 100px;
+  position: relative;
 }
 
 .slider-list {
   margin: 0;
   padding: 0;
-  posi
 }
 
 .slider-list > li {
@@ -363,6 +363,17 @@ a.user-ancor-iconed::before {
 .slide-content {
   width: 500px;
   position: relative;
+  padding-top: 70px;
+}
+
+.slide-content::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
 }
 
 .slider-index {
@@ -379,19 +390,11 @@ a.user-ancor-iconed::before {
   z-index: -1;
 }
 
-.slider-message::before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 7px;
-  background-color: #ffffff;
-  margin: 35px 0 30px 0;
-}
-
 .slider-message {
   font-size: 47px;
   line-height: 56px;
   white-space: nowrap;
+  letter-spacing: 0.5px;
 }
 
 .slider-description {
@@ -399,7 +402,7 @@ a.user-ancor-iconed::before {
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
-  margin: 25px 0 50px 0;
+  margin: 20px 0 45px 0;
 }
 
 .slider-showmore {
@@ -412,7 +415,7 @@ a.user-ancor-iconed::before {
 }
 
 .slider-features {
-  margin-top: 50px;
+  margin-top: 40px;
   border-spacing: 0 20px;
 }
 
@@ -420,7 +423,8 @@ a.user-ancor-iconed::before {
   font-family: "Gilroy Light", Arial, sans-serif;
   font-size: 36px;
   font-weight: normal;
-  width: 160px;
+  padding: 0 80px 0 0;
+  white-space: nowrap;
 }
 
 .slider-feature-description {
@@ -433,27 +437,26 @@ a.user-ancor-iconed::before {
 .slider-handlers {
   position: absolute;
   display: flex;
-  flex-direction: row-reverse;
-  width: 1040px;
-  margin-top: -175px;
-  z-index: -1;
+  justify-content: space-between;
+  width: 78px;
+  top: 318px;
+  right: 22px;
 }
 
 button.slider-select {
-  border: 2px solid #000000;
-  border-radius: 50%;
-  background-color: #ffffff;
-  padding: 5px;
-  margin-right: 20px;
+  padding: 0;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/slider-button-empty.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
 }
 
-button.slider-select:last-child::after {
-  content: "";
-  position: absolute;
-  border: 2px solid #000000;
-  border-radius: 50%;
-  padding: 1px;
-  margin: -3px;
+button.slider-button-selected {
+  background-image: url("../img/slider-button.svg");
 }
 /*----------------------*/
 
