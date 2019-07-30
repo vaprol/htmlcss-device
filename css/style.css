@@ -1,22 +1,19 @@
-*, *!::before, *!::after {
+*, *:not(::before), *:not(::after) {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
 }
-.content-box-component {
-  box-sizing: content-box;
-}
 
 body {
-  margin: 0 auto;
-  padding: 0;
-
   font-family: "Gilroy ExtraBold", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
   color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -72,16 +69,17 @@ li {
   margin: 0 auto;
   padding: 0 60px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .main-header::before {
   content: "";
-  background-color: #f7e296;
   width: 1160px;
   height: 300px;
+  background-color: #f7e296;
   position: absolute;
   z-index: -1;
-  top: 40px;
+  top: 25px;
   margin-left: -60px;
 }
 
@@ -90,6 +88,7 @@ li {
   font-size: 48px;
   line-height: 48px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .header-logo:hover,
@@ -112,11 +111,7 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  min-height: 50px;
-}
-
-.search-user-row ul {
-  padding: 0;
+  min-height: 52px;
 }
 
 .header-searchbar {
@@ -136,6 +131,7 @@ li {
   border: none;
   outline: none;
   width: 355px;
+  box-sizing: border-box;
   padding-left: 40px;
 }
 
@@ -155,7 +151,7 @@ li {
 .header-searchbar input:focus {
   filter: none;
   border-bottom: 2px solid #000000;
-  /*margin-top: 2px;*/
+  margin-bottom: -2px;
 }
 
 .header-searchbar button {
@@ -166,6 +162,7 @@ li {
   background-color: transparent;
   border: 2px solid #000000;
   padding: 0 20px;
+  margin-top: 2px;
 }
 
 .header-searchbar button:hover {
@@ -303,6 +300,8 @@ a.main-menu-item {
   filter: opacity(0.3);
   margin-left: 12px;
 }
+
+
 
 .catalog-submenu {
   background-color: #f7e296;
