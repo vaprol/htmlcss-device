@@ -66,7 +66,7 @@ li {
 /*----------------------*/
 .main-header {
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   padding: 0 60px;
   box-sizing: border-box;
   position: relative;
@@ -88,7 +88,7 @@ li {
   font-size: 48px;
   line-height: 48px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .header-logo:hover,
@@ -110,7 +110,7 @@ li {
 .search-user-row {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .header-searchbar {
@@ -196,7 +196,6 @@ li {
 }
 
 .header-user-panel a {
-  display: flex;
   align-items: center;
   color: #000000;
   font-family: "Open Sans Light", Arial, sans-serif;
@@ -204,6 +203,8 @@ li {
   line-height: 30px;
   font-weight: normal;
   white-space: nowrap;
+  position: relative;
+  padding-left: 25px;
 }
 
 .header-user-panel a:hover {
@@ -216,11 +217,13 @@ li {
 
 a.user-ancor-iconed::before {
   content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
   margin-right: 10px;
   background-repeat: no-repeat;
+  left: 0;
+  top: 4px;
 }
 
 .header-custom-user .user-ancor-iconed::before {
@@ -236,7 +239,7 @@ a.user-ancor-iconed::before {
 }
 
 .header-custom-cart {
-  margin-left: 35px;
+  margin-left: 40px;
 }
 
 .header-custom-cart .user-ancor-iconed::before {
@@ -246,10 +249,6 @@ a.user-ancor-iconed::before {
 
 /*Стили элементов навигационного меню хедера*/
 /*----------------------*/
-.main-nav {
-  margin-bottom: 50px;
-}
-
 .header-nav-list {
   padding: 0;
   margin: 0;
@@ -258,12 +257,12 @@ a.user-ancor-iconed::before {
 }
 
 .header-nav-list > li:first-child {
-  width: 440px;
-  margin-right: 100px;
+  flex-basis: 500px;
+  margin-right: 40px;
 }
 
 .header-nav-list > li:nth-child(2) {
-  margin-right: 40px;
+  margin-right: 35px;
 }
 
 .header-nav-list > li:last-child {
@@ -272,7 +271,7 @@ a.user-ancor-iconed::before {
 
 a.main-menu-item {
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 3.5px;
 }
 
 .header-nav-list a:hover {
@@ -298,8 +297,6 @@ a.main-menu-item {
   filter: opacity(0.3);
   margin-left: 12px;
 }
-
-
 
 .catalog-submenu {
   background-color: #f7e296;
