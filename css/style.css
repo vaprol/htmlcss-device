@@ -111,11 +111,11 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  min-height: 52px;
 }
 
 .header-searchbar {
   width: 440px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   margin-right: 100px;
@@ -125,19 +125,17 @@ li {
   filter: opacity(0.3);
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  line-height: 45px;
   font-weight: normal;
   background-color: transparent;
   border: none;
   outline: none;
-  width: 355px;
-  box-sizing: border-box;
-  padding-left: 40px;
+  width: 315px;
+  height: 45px;
+  padding: 0 0 0 40px;
 }
 
 .header-searchbar::before {
   content: "";
-  display: block;
   position: absolute;
   width: 16px;
   height: 16px;
@@ -157,12 +155,12 @@ li {
 .header-searchbar button {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  line-height: 45px;
   font-weight: normal;
   background-color: transparent;
   border: 2px solid #000000;
   padding: 0 20px;
-  margin-top: 2px;
+  height: 45px;
+  box-sizing: content-box;
 }
 
 .header-searchbar button:hover {
@@ -186,6 +184,7 @@ li {
   display: flex;
   align-items: center;
   padding: 0;
+  margin: 0;
 }
 
 .user-login-panel li:first-child {
@@ -193,7 +192,7 @@ li {
 }
 
 .user-login-panel .user-logout {
-  filter: opacity(0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .header-user-panel a {
@@ -204,7 +203,6 @@ li {
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
-  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 
@@ -238,7 +236,7 @@ a.user-ancor-iconed::before {
 }
 
 .header-custom-cart {
-margin-left: 35px;
+  margin-left: 35px;
 }
 
 .header-custom-cart .user-ancor-iconed::before {
@@ -388,7 +386,6 @@ a.main-menu-item {
 .slider-message {
   font-size: 47px;
   line-height: 56px;
-  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 
@@ -418,7 +415,6 @@ a.main-menu-item {
   font-family: "Gilroy Light", Arial, sans-serif;
   font-size: 36px;
   font-weight: normal;
-  letter-spacing: 0.5px;
   width: 160px;
 }
 
@@ -964,7 +960,6 @@ button.close-popup:active {
   font-size: 15px;
   line-height: 30px;
   font-weight: normal;
-  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 
@@ -1023,7 +1018,6 @@ button.close-popup:active {
 h1.catalog-heading {
   font-size: 47px;
   line-height: 48px;
-  letter-spacing: 1px;
   width: 1040px;
   margin: 0 auto 30px;
 }
@@ -1045,7 +1039,6 @@ h1.catalog-heading {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
-  letter-spacing: 0.5px;
 }
 
 .breadcrumbs a:hover {
@@ -1181,7 +1174,6 @@ h1.catalog-heading {
   font-size: 14px;
   line-height: 40px;
   font-weight: normal;
-  letter-spacing: 0.5px;
 }
 
 .filter-bluetooth {
@@ -1330,7 +1322,6 @@ h1.catalog-heading {
   font-family: "Gilroy Light", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
-  letter-spacing: 0.5px;
   flex-shrink: 0;
   margin-left: 20px;
 }
