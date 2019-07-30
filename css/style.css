@@ -335,7 +335,7 @@ a.user-ancor-iconed::before {
 /*Стили элементов главного слайдера*/
 /*----------------------*/
 .promo-slider {
-  width: 1040px;
+  width: 1160px;
   margin: 0 auto 100px;
   position: relative;
 }
@@ -347,13 +347,14 @@ a.user-ancor-iconed::before {
 
 .slider-list > li {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .slide-image {
   display: flex;
   justify-content: center;
-  width: 500px;
+  width: 560px;
+  margin-right: 40px;
 }
 
 .slide-image a {
@@ -380,6 +381,7 @@ a.user-ancor-iconed::before {
   position: absolute;
   top: 0;
   right: -10px;
+  z-index: -1;
 }
 
 .slider-index span {
@@ -440,7 +442,7 @@ a.user-ancor-iconed::before {
   justify-content: space-between;
   width: 78px;
   top: 318px;
-  right: 22px;
+  right: 82px;
 }
 
 button.slider-select {
