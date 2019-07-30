@@ -336,7 +336,7 @@ a.user-ancor-iconed::before {
 /*----------------------*/
 .promo-slider {
   width: 1160px;
-  margin: 0 auto 100px;
+  margin: 0 auto 90px;
   position: relative;
 }
 
@@ -472,80 +472,62 @@ button.slider-button-selected {
   justify-content: space-between;
 }
 
-.goods-category-name {
+.goods-categories li {
   width: 160px;
   padding: 0;
 }
 
-.goods-category-name a::before {
-   content: "";
-   background-repeat: no-repeat;
-   background-color: rgba(240, 197, 46, 0.5);
-   background-position: center;
-   width: 160px;
-   height: 160px;
-   display: block;
-  margin-bottom: 40px;
+.goods-category-name {
+  display: block;
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 160px, transparent 160px);
+}
+
+.goods-category-name::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin-bottom: 35px;
  }
 
-.goods-category-name:nth-child(1) a::before {
+.goods-categories .category-vr::before {
   background-image: url("../img/goods-catogory-1.svg");
 }
 
-.goods-category-name:nth-child(2) a::before {
+.goods-categories .category-monopod::before {
   background-image: url("../img/goods-catogory-2.svg");
+  background-position: bottom center;
 }
 
-.goods-category-name:nth-child(3) a::before {
+.goods-categories .category-camera::before {
   background-image: url("../img/goods-catogory-3.svg");
 }
 
-.goods-category-name:nth-child(4) a::before {
+.goods-categories .category-fitband::before {
   background-image: url("../img/goods-catogory-4.svg");
 }
 
-.goods-category-name:nth-child(5) a::before {
+.goods-categories .category-smartwatches::before {
   background-image: url("../img/goods-catogory-5.svg");
 }
 
-.goods-category-name:nth-child(6) a::before {
+.goods-categories .category-quadrocopters::before {
   background-image: url("../img/goods-catogory-6.svg");
 }
 
-.goods-category-name a:hover::before {
-  background-color: rgba(240, 197, 46, 1);
+.goods-category-name:hover {
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 1) 160px, transparent 160px);
 }
 
-.goods-category-name a:active::before {
-  background-color: rgba(240, 197, 46, 1);
+.goods-category-name:active {
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 1) 160px, transparent 160px);
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.goods-category-name a:active {
-  color: rgba(0, 0, 0, 0.3)
-}
-
-.goods-category-name:nth-child(1) a:active::before {
-  background-image: url("../img/goods-catogory-1-hover.png");
-}
-
-.goods-category-name:nth-child(2) a:active::before {
-  background-image: url("../img/goods-catogory-2-hover.png");
-}
-
-.goods-category-name:nth-child(3) a:active::before {
-  background-image: url("../img/goods-catogory-3-hover.png");
-}
-
-.goods-category-name:nth-child(4) a:active::before {
-  background-image: url("../img/goods-catogory-4-hover.png");
-}
-
-.goods-category-name:nth-child(5) a:active::before {
-  background-image: url("../img/goods-catogory-5-hover.png");
-}
-
-.goods-category-name:nth-child(6) a:active::before {
-  background-image: url("../img/goods-catogory-6-hover.png");
+.goods-category-name:active::before {
+  filter: opacity(0.3);
 }
 /*----------------------*/
 
