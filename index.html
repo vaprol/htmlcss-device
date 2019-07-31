@@ -191,34 +191,6 @@
 
       <section class="about">
         <h2 class="visually-hidden">О компании</h2>
-        <div class="popup-container">
-          <div class="map-popup visually-hidden">
-            <!--          Карта-->
-            <button class="close-popup" type="button" aria-label="Закрыть попап"> </button>
-          </div>
-
-          <div class="feedback-popup visually-hidden">
-            <h2 class="visually-hidden">Форма обратной связи</h2>
-            <button class="close-popup" type="button" aria-label="Закрыть попап"> </button>
-            <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
-              <label class="feedback-form-name" for="feedback-name">
-                Ваше имя: <br>
-                <input type="text" name="name" id="feedback-name" value="" placeholder="Имя Фамилия">
-              </label>
-              <label class="feedback-form-email" for="feedback-email">
-                Ваш e-mail: <br>
-                <input type="email" name="email" id="feedback-email" value="" placeholder="email@example.com">
-              </label>
-
-              <label class="feedback-form-message" for="feedback-message">
-                Текст письма: <br>
-                <textarea name="feedback-message" id="feedback-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-              </label>
-              <button type="submit" class="button-crossed">Отправить</button>
-            </form>
-
-          </div>
-        </div>
         <div class="container">
           <div class="about-us">
             <h3>О нас</h3>
@@ -234,10 +206,40 @@
           <div class="about-contacts">
             <h3>Контакты</h3>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <img src="img/map-placeholder.jpg" alt="Наш адрес: г. Москва, ул. Строителей, 1">
+            <a href="#" class="bigmap-open">
+              <img src="img/map-placeholder.jpg" alt="Наш адрес: г. Москва, ул. Строителей, 1">
+            </a>
             <button type="button" class="button-crossed">Напишите нам</button>
           </div>
         </div>
+
+        <div class="map-popup visually-hidden">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CGaqjBLs" width="960" height="560" frameborder="0" allowfullscreen="true"></iframe>
+          <button class="close-popup" type="button" aria-label="Закрыть попап"> </button>
+        </div>
+
+        <div class="feedback-popup visually-hidden">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+            <label class="feedback-form-name" for="feedback-name">
+              Ваше имя: <br>
+              <input type="text" name="name" id="feedback-name" value="" placeholder="Имя Фамилия">
+            </label>
+            <label class="feedback-form-email" for="feedback-email">
+              Ваш e-mail: <br>
+              <input type="email" name="email" id="feedback-email" value="" placeholder="email@example.com">
+            </label>
+
+            <label class="feedback-form-message" for="feedback-message">
+              Текст письма: <br>
+              <textarea name="feedback-message" id="feedback-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+            </label>
+            <button type="submit" class="button-crossed">Отправить</button>
+          </form>
+          <button class="close-popup" type="button" aria-label="Закрыть попап"> </button>
+        </div>
+
+<!--        <div class="popup-overlay"></div>-->
       </section>
     </main>
 
