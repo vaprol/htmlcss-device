@@ -1,5 +1,5 @@
 (function () {
-  // Открытие навигационного подменю каталога
+// Открытие навигационного подменю каталога
   var catalogOpener = document.querySelector('.catalog-opener');
   var subMenu = document.querySelector('.catalog-submenu');
 
@@ -8,9 +8,9 @@
   });
   catalogOpener.addEventListener('mouseleave', function () {
     subMenu.classList.add('visually-hidden');
-  })
+  });
 
-  // Открытие-закрытие попапа карты
+// Открытие-закрытие попапа карты
   var onMapOpenerButtonClick = document.querySelector('.bigmap-open');
   var mapPopup = document.querySelector('.map-popup');
   var onMapCloseButtonClick = mapPopup.querySelector('.close-popup');
@@ -23,8 +23,7 @@
     mapPopup.classList.add('visually-hidden');
   });
 
-
-  // Открытие-закрытие попапа обратной связи
+// Открытие-закрытие попапа обратной связи
   var onFeedbackOpenerButtonClick = document.querySelector('.feedback-popup-opener');
   var feedbackPopup = document.querySelector('.feedback-popup');
   var onFeedbackCloseButtonClick = feedbackPopup.querySelector('.close-popup');
@@ -35,4 +34,23 @@
   onFeedbackCloseButtonClick.addEventListener('click', function () {
     feedbackPopup.classList.add('visually-hidden');
   });
+
+//  Работа со слайдером
+  var changeSlide = function () {
+    var slides = document.querySelectorAll('.slider-list > li');
+    for (var i = 0; i < slides.length; i++) {
+      var slide = slides[i];
+      if (slide.classList[0] !== 'visually-hidden') {
+        slide.classList.add('visually-hidden');
+        if (slides[i+1]) {
+          slides[i+1].classList.remove('visually-hidden');
+        } else {
+          slides[0].classList.remove('visually-hidden');
+        }
+        break;
+      }
+    }
+  };
+
+  setInterval(changeSlide, 10000);
 })();
