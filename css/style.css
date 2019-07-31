@@ -330,6 +330,14 @@ a.user-ancor-iconed::before {
   line-height: 35px;
   font-weight: normal;
 }
+
+.catalog-submenu a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.catalog-submenu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 /*----------------------*/
 
 /*Стили элементов главного слайдера*/
@@ -1358,7 +1366,11 @@ h1.catalog-heading {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+}
+
+.goods-list img:hover {
+
 }
 
 .goods-list .add-to-buttons {
@@ -1372,6 +1384,11 @@ h1.catalog-heading {
   top: 0;
   left: 0;
   align-items: center;
+  filter: opacity(0);
+}
+
+.goods-list .add-to-buttons:hover {
+  filter: none;
 }
 
 button.add-to-cart {
@@ -1426,6 +1443,7 @@ button.add-to-compare:active {
 }
 
 .page-navigation {
+  margin-top: -20px;
   background-color: rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-between;
