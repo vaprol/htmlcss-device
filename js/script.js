@@ -38,44 +38,37 @@
 //  Работа со слайдером
   var sliderButtonsNode = document.querySelector('.slider-handlers');
   var sliderButtons = sliderButtonsNode.querySelectorAll('.slider-select');
+  var mainSlider = document.querySelector('.promo-slider');
+  var slides = mainSlider.querySelectorAll('.slider-list > li');
 
-  var changeSlide = function (slideIndex) {
-    var slides = document.querySelectorAll('.slider-list > li');
-    if (slideIndex) {
-      for (var j = 1; j <= slides.length; j++) {
-        if (slideIndex === j) {
-          slides[j-1].style.opacity = '1';
-          sliderButtons[j-1].classList.add('slider-button-selected');
-        } else {
-          slides[j-1].style.opacity = '0';
-          sliderButtons[j-1].classList.remove('slider-button-selected');
-        }
-      }
-    } else {
-      for (var i = 0; i < slides.length; i++) {
-        var slide = slides[i];
-        if (slide.style.opacity === '1') {
-          slide.style.opacity = '0';
-          sliderButtons[i].classList.remove('slider-button-selected');
-          if (slides[i + 1]) {
-            slides[i + 1].style.opacity = '1';
-            sliderButtons[i + 1].classList.add('slider-button-selected');
-          } else {
-            slides[0].style.opacity = '1';
-            sliderButtons[0].classList.add('slider-button-selected');
-          }
-          break;
-        }
-      }
+  var changeSlide = function () {
+    var currentSlide = mainSlider.querySelector('.slide-shown');
+    var currentSlideIndex = Array.from(slides).indexOf(currentSlide);
+    var nextSlideIndex = 0;
+    if ((currentSlideIndex + 1) < slides.length) {
+      nextSlideIndex = currentSlideIndex + 1;
     }
+    currentSlide.classList.remove('slide-shown');
+    currentSlide.classList.add('slide-hidden');
+    slides[nextSlideIndex].classList.remove('slide-hidden');
+    slides[nextSlideIndex].classList.add('slide-shown');
+    sliderButtons[currentSlideIndex].classList.remove('slider-button-selected');
+    sliderButtons[nextSlideIndex].classList.add('slider-button-selected');
   };
   var sliderInterval = setInterval(changeSlide, 5000);
 
+  var changeSlideManually = function (slideIndex) {
+    mainSlider.querySelector('.slide-shown').classList.add('slide-hidden');
+    mainSlider.querySelector('.slide-shown').classList.remove('slide-shown');
+    slides[slideIndex-1].classList.remove('slide-hidden');
+    slides[slideIndex-1].classList.add('slide-shown');
+    mainSlider.querySelector('.slider-button-selected').classList.remove('slider-button-selected');
+    sliderButtons[slideIndex-1].classList.add('slider-button-selected');
+  };
   sliderButtonsNode.addEventListener('click', function (evt) {
     if (evt.target.nodeName === 'BUTTON') {
       clearInterval(sliderInterval);
-      changeSlide(Array.from(sliderButtons).indexOf(evt.target) + 1);
+      changeSlideManually(Array.from(sliderButtons).indexOf(evt.target) + 1);
     }
-
   })
 })();
