@@ -187,12 +187,9 @@ li {
   margin: 0;
 }
 
-.user-login-panel li:first-child {
-  margin-right: 20px;
-}
-
 .user-login-panel .user-logout {
   color: rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
 }
 
 .header-user-panel a {
@@ -204,6 +201,9 @@ li {
   font-weight: normal;
   white-space: nowrap;
   position: relative;
+}
+
+.user-ancor-iconed {
   padding-left: 25px;
 }
 
@@ -885,7 +885,7 @@ button.close-popup:active {
 }
 
 .footer-address {
-  margin: 30px 0 80px 0;
+  margin: 30px 0 70px 0;
 }
 
 .footer-column:first-child::after {
@@ -953,7 +953,7 @@ button.close-popup:active {
 .footer-user-panel {
   display: flex;
   justify-content: flex-end;
-  margin: 0;
+  margin: 5px 0 0 0;
   padding: 0;
 }
 
@@ -966,7 +966,6 @@ button.close-popup:active {
 }
 
 .footer-user-panel a {
-  display: flex;
   align-items: center;
   color: #ffffff;
   filter: opacity(0.7);
@@ -975,6 +974,7 @@ button.close-popup:active {
   line-height: 30px;
   font-weight: normal;
   white-space: nowrap;
+  position: relative;
 }
 
 .footer-user-panel a:hover {
@@ -1005,7 +1005,7 @@ button.close-popup:active {
 }
 
 .footer-phone {
-  margin: 50px 0 60px;
+  margin: 40px 0 60px;
   text-align: right;
 }
 
@@ -1026,19 +1026,20 @@ button.close-popup:active {
 }
 
 .catalog-page .main-header {
-  margin-bottom: 90px;
+  margin-bottom: 85px;
 }
 
 h1.catalog-heading {
   font-size: 47px;
   line-height: 48px;
   width: 1040px;
-  margin: 0 auto 30px;
+  margin: 0 auto 25px;
+  letter-spacing: 0.5px;
 }
 
 .breadcrumbs {
   width: 1040px;
-  margin: 0 auto 50px;
+  margin: 0 auto 45px;
   padding: 0;
   display: flex;
 }
