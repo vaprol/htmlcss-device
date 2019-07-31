@@ -1099,8 +1099,9 @@ h1.catalog-heading {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
+  line-height: 20px;
   padding: 25px 0;
-  margin-bottom: 70px;
+  margin: 0 0 70px 0;
 }
 
 .catalog-filters fieldset {
@@ -1108,17 +1109,18 @@ h1.catalog-heading {
   border-top: 2px solid #000000;
   width: 200px;
   padding: 0;
-  margin-bottom: 40px;
+  margin: 0 0 30px 0;
 }
 
 .catalog-filters h3 {
   line-height: 45px;
   padding: 0;
-  margin: 5px 0 25px 0;
+  margin: 0 0 10px 0;
 }
 
 .price-custom-filter {
-  height: 22px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .price-bar-outer {
@@ -1196,6 +1198,10 @@ h1.catalog-heading {
   flex-direction: column;
 }
 
+.filter-bluetooth h3 {
+  margin-bottom: 5px;
+}
+
 .filter-bluetooth label {
   display: flex;
   align-items: center;
@@ -1234,21 +1240,26 @@ h1.catalog-heading {
   background-color: rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
+  padding: 23px 0;
 }
 
 .catalog-goods-sort p {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
-  margin-right: 45px;
+  margin-right: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .catalog-goods-sort ul {
   display: flex;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .sort-types li {
-  margin-right: 25px;
+  margin-right: 30px;
 }
 
 .sort-dir-buttons {
@@ -1312,7 +1323,7 @@ h1.catalog-heading {
 /*----------------------*/
 .goods-list {
   padding: 70px 0 0 0;
-  margin: 0 0 30px 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1326,11 +1337,13 @@ h1.catalog-heading {
   width: 360px;
   justify-content: space-between;
   align-items: baseline;
+  margin-top: 15px;
 }
 
 .product-spec h3 {
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
 }
 
 .product-price {
@@ -1343,6 +1356,9 @@ h1.catalog-heading {
 
 .goods-list li {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .goods-list .add-to-buttons {
