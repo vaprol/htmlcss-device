@@ -36,21 +36,46 @@
   });
 
 //  Работа со слайдером
-  var changeSlide = function () {
+  var sliderButtonsNode = document.querySelector('.slider-handlers');
+  var sliderButtons = sliderButtonsNode.querySelectorAll('.slider-select');
+
+  var changeSlide = function (slideIndex) {
     var slides = document.querySelectorAll('.slider-list > li');
-    for (var i = 0; i < slides.length; i++) {
-      var slide = slides[i];
-      if (slide.style.opacity === '1') {
-        slide.style.opacity = '0';
-        if (slides[i+1]) {
-          slides[i+1].style.opacity = '1';
+    if (slideIndex) {
+      for (var j = 1; j <= slides.length; j++) {
+        if (slideIndex === j) {
+          slides[j-1].style.opacity = '1';
+          sliderButtons[j-1].classList.add('slider-button-selected');
         } else {
-          slides[0].style.opacity = '1';
+          slides[j-1].style.opacity = '0';
+          sliderButtons[j-1].classList.remove('slider-button-selected');
         }
-        break;
+      }
+    } else {
+      for (var i = 0; i < slides.length; i++) {
+        var slide = slides[i];
+        if (slide.style.opacity === '1') {
+          slide.style.opacity = '0';
+          sliderButtons[i].classList.remove('slider-button-selected');
+          if (slides[i + 1]) {
+            slides[i + 1].style.opacity = '1';
+            sliderButtons[i + 1].classList.add('slider-button-selected');
+          } else {
+            slides[0].style.opacity = '1';
+            sliderButtons[0].classList.add('slider-button-selected');
+          }
+          break;
+        }
       }
     }
   };
-
   var sliderInterval = setInterval(changeSlide, 5000);
+
+  sliderButtonsNode.addEventListener('click', function (evt) {
+    if (evt.target.nodeName === 'BUTTON') {
+      clearInterval(sliderInterval);
+      changeSlide(Array.from(sliderButtons).indexOf(evt.target) + 1);
+    }
+
+  })
 })();
