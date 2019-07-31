@@ -40,17 +40,17 @@
     var slides = document.querySelectorAll('.slider-list > li');
     for (var i = 0; i < slides.length; i++) {
       var slide = slides[i];
-      if (slide.classList[0] !== 'visually-hidden') {
-        slide.classList.add('visually-hidden');
+      if (slide.style.opacity === '1') {
+        slide.style.opacity = '0';
         if (slides[i+1]) {
-          slides[i+1].classList.remove('visually-hidden');
+          slides[i+1].style.opacity = '1';
         } else {
-          slides[0].classList.remove('visually-hidden');
+          slides[0].style.opacity = '1';
         }
         break;
       }
     }
   };
 
-  setInterval(changeSlide, 10000);
+  var sliderInterval = setInterval(changeSlide, 5000);
 })();

@@ -345,6 +345,7 @@ a.user-ancor-iconed::before {
 /*----------------------*/
 .promo-slider {
   width: 1160px;
+  min-height: 492px;
   margin: 0 auto 90px;
   position: relative;
 }
@@ -355,8 +356,16 @@ a.user-ancor-iconed::before {
 }
 
 .slider-list > li {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: flex-start;
+  transition-duration: 1000ms;
+}
+
+.slide-hidden {
+  opacity: 0;
 }
 
 .slide-image {
