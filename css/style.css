@@ -284,12 +284,12 @@ a.user-ancor-iconed::before {
   filter: opacity(0.3);
 }
 
-.catalog-opener {
+.catalog-opener > a {
   position: relative;
   padding-right: 32px;
 }
 
-.catalog-opener::after {
+.catalog-opener > a::after {
   content: "";
   position: absolute;
   background-image: url("../img/plus.svg");
@@ -304,16 +304,17 @@ a.user-ancor-iconed::before {
 .catalog-submenu {
   background-color: #f7e296;
   position: absolute;
-  top: 45px;
+  top: 24px;
   left: -60px;
   width: 1160px;
-  height: 141px;
-  padding: 0 60px 30px 60px;
+  height: 163px;
+  padding: 26px 60px 30px 60px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .catalog-submenu li {
