@@ -1096,6 +1096,21 @@ h1.catalog-heading {
 
 /*Стили элементов фильтра товаров в каталоге*/
 /*----------------------*/
+.catalog-page .bg-wrapper {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.catalog-page .bg-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
+  linear-gradient(to right, rgba(0, 0, 0, 0.08) calc(50% - 252px), transparent calc(50% - 252px));
+  z-index: -1;
+}
+
 .catalog-page .bg-container {
   width: 1160px;
   margin: 0 auto;
@@ -1251,7 +1266,6 @@ h1.catalog-heading {
 /*Стили элементов сортировки товаров в каталоге*/
 /*----------------------*/
 .catalog-goods-sort {
-  background-color: rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   padding: 23px 0;
@@ -1501,7 +1515,7 @@ button.add-to-compare:active {
 }
 
 .catalog-page .main-footer {
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 
