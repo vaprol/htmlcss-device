@@ -10,9 +10,11 @@
       <a href="#"><b class="header-logo">Device</b></a>
 
       <div class="search-user-row">
-        <form class="header-searchbar">
+        <form class="header-searchbar"
+              action="https://echo.htmlacademy.ru"
+              method="post">
           <label class="visually-hidden" for="header-search">Поиск по сайту</label>
-          <input type="text" id="header-search" placeholder="Поиск по сайту">
+          <input type="text" name="search-request" id="header-search" placeholder="Поиск по сайту">
           <button type="submit" class="hidden">Найти</button>
         </form>
         <ul class="header-user-panel">
@@ -152,26 +154,26 @@
         <h2 class="visually-hidden">Услуги</h2>
         <div class="container">
           <ul class="service-categories">
-            <li class="service-category">
-              <button type="button" class="button-crossed">Доставка</button>
+            <li class="service-category active-category">
+              <button type="button" class="button-crossed choose-delivery" disabled>Доставка</button>
             </li>
             <li class="service-category">
-              <button type="button" class="button-crossed">Гарантия</button>
+              <button type="button" class="button-crossed choose-warranty">Гарантия</button>
             </li>
             <li class="service-category">
-              <button type="button" class="button-crossed">Кредит</button>
+              <button type="button" class="button-crossed choose-credit">Кредит</button>
             </li>
           </ul>
           <ul class="service-descriptions">
-            <li class="service-category-description">
+            <li class="service-category-description description-delivery">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="service-category-description hidden">
+            <li class="service-category-description description-warranty hidden">
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
-            <li class="service-category-description hidden">
+            <li class="service-category-description description-credit hidden">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>

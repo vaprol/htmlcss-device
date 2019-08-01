@@ -58,9 +58,8 @@ li {
 }
 
 .button-crossed:active {
-  color: #f7e184;
-  background-color: #000000;
-  background-image: none;
+  background-color: #f0c52e;
+  color: rgba(0, 0, 0, 0.3);
 }
 /*Стили элементов верхней строки хедера*/
 /*----------------------*/
@@ -430,11 +429,6 @@ a.user-ancor-iconed::before {
   width: 220px;
 }
 
-.slider-showmore:active {
-  background-color: #f0c52e;
-  color: rgba(0, 0, 0, 0.3);
-}
-
 .slider-features {
   margin-top: 40px;
   border-spacing: 0 20px;
@@ -576,7 +570,7 @@ button.slider-button-selected {
   margin-bottom: 25px;
 }
 
-.service-categories li:active {
+.service-categories .active-category {
   background-color: #000000;
 }
 
@@ -589,6 +583,16 @@ button.slider-button-selected {
   padding: 0;
   margin: 0;
   line-height: 40px;
+}
+
+.active-category button {
+  background-image: none;
+  color: #f7e184;
+}
+
+.active-category button:hover {
+  background-color: transparent;
+  color: #f7e184;
 }
 
 .service-descriptions {
@@ -736,11 +740,6 @@ button.slider-button-selected {
   width: 260px;
   text-align: center;
   line-height: 40px;
-}
-
-.about .button-crossed:active {
-  background-color: #f0c52e;
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .about-contacts {
@@ -1246,11 +1245,6 @@ h1.catalog-heading {
 
 .catalog-filters .button-crossed {
   width: 200px;
-}
-
-.catalog-filters .button-crossed:active {
-  background-color: #f0c52e;
-  color: rgba(0, 0, 0, 0.3);
 }
 /*----------------------*/
 
